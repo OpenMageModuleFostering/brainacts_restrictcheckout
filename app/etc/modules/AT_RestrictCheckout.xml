@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <AT_RestrictCheckout>
+            <active>true</active>
+            <codePool>local</codePool>
+        </AT_RestrictCheckout>
+    </modules>
+</config>

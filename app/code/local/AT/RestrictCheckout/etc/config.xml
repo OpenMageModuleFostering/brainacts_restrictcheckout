@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <AT_RestrictCheckout>
+            <version>1.0.0</version>
+        </AT_RestrictCheckout>
+    </modules>
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <checkout_validate_restriction>
+                        <type>singleton</type>
+                        <class>restrictcheckout/observer</class>
+                        <method>validate</method>
+                    </checkout_validate_restriction>
+                </observers>
+            </controller_action_predispatch>
+
+            <customer_login>
+                <observers>
+                    <checkout_validate_refresh>
+                        <type>singleton</type>
+                        <class>restrictcheckout/observer</class>
+                        <method>refresh</method>
+                    </checkout_validate_refresh>
+                </observers>
+            </customer_login>
+
+            <controller_action_layout_render_before_checkout_cart_index>
+                <observers>
+                    <checkout_cart_paypal_buttons>
+                        <type>singleton</type>
+                        <class>restrictcheckout/observer</class>
+                        <method>removePaypalButtons</method>
+                    </checkout_cart_paypal_buttons>
+                </observers>
+            </controller_action_layout_render_before_checkout_cart_index>
+        </events>
+
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <AT_RestrictCheckout>
+                    <files>
+                        <default>AT_RestrictCheckout.csv</default>
+                    </files>
+                </AT_RestrictCheckout>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <global>
+        <models>
+            <restrictcheckout>
+                <class>AT_RestrictCheckout_Model</class>
+            </restrictcheckout>
+            <catalog>
+                <rewrite>
+                    <product>AT_RestrictCheckout_Model_Rewrite_Catalog_Product</product>
+                </rewrite>
+            </catalog>
+        </models>
+
+        <blocks>
+            <restrictcheckout>
+                <class>AT_RestrictCheckout_Block</class>
+            </restrictcheckout>
+            <checkout>
+                <rewrite>
+                    <onepage_link>AT_RestrictCheckout_Block_Rewrite_Checkout_Onepage_Link</onepage_link>
+                    <cart_sidebar>AT_RestrictCheckout_Block_Rewrite_Checkout_Cart_Sidebar</cart_sidebar>
+                </rewrite>
+            </checkout>
+
+        </blocks>
+
+        <helpers>
+            <restrictcheckout>
+                <class>AT_RestrictCheckout_Helper</class>
+            </restrictcheckout>
+            <checkout>
+                <rewrite>
+                    <data>AT_RestrictCheckout_Helper_Rewrite_Checkout_Data</data>
+                </rewrite>
+            </checkout>
+        </helpers>
+    </global>
+</config>
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>BrainActs_RestrictCheckout</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>osm</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Hides add to cart and checkout button using simple rules.</summary>
+    <description>Hides add to cart and checkout button using simple rules.</description>
+    <notes>First stable release</notes>
+    <authors><author><name>Aleksandr Tykhnov</name><user>nakilon</user><email>tihonov.sania@gmail.com</email></author></authors>
+    <date>2016-11-14</date>
+    <time>11:40:25</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="AT_RestrictCheckout.xml" hash="f8ec1fcc3e1425791c60c8f30d93748e"/></dir></target><target name="magelocal"><dir name="AT"><dir name="RestrictCheckout"><dir name="Block"><dir name="Rewrite"><dir name="Checkout"><dir name="Cart"><file name="Sidebar.php" hash="c4f82afd77667ee7a45f6071d6d2b1a2"/></dir><dir name="Onepage"><file name="Link.php" hash="841ac0a461df9fde17e95c0a6815ae27"/></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="0d95c9898e502cff500f50b64c722e75"/><dir name="Rewrite"><dir name="Checkout"><file name="Data.php" hash="3420cd8d1213cc06d930fade7e5b7514"/></dir></dir></dir><dir name="Model"><file name="Observer.php" hash="1cea3ce3587244c8d2c87851872250b2"/><dir name="Rewrite"><dir name="Catalog"><file name="Product.php" hash="9cd06bf2263f06cedc2380ee97732065"/></dir></dir><dir name="System"><dir name="Config"><dir name="Source"><file name="Country.php" hash="cb45fc395a2ba04cbbeeec57a3b77e2f"/><file name="Message.php" hash="36a0e3e7b68287cc373ca89fb6cb82bf"/><file name="Website.php" hash="88aabb7ca15d2c56c3cad4db7ad38bee"/></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="ac523e5bdc657e4d7e14ad3c9d358e9f"/><file name="system.xml" hash="9a54a0705bead25f7341addb8259e9ce"/></dir></dir></dir></target><target name="mage"><dir name="lib"><dir name="AT"><dir name="MaxMind"><file name="GeoIP.php" hash="39b1a7f935c085a256fb7bec0673e5e5"/></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="AT_RestrictCheckout.csv" hash="dbb5685def365ba1af4d4dbbf6fe8e24"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>7.0.4</max></php></required></dependencies>
+</package>
