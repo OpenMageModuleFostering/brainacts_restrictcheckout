@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Hides add to cart and checkout button using simple rules.
