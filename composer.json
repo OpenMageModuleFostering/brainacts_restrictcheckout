@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/BrainActs_RestrictCheckout",
+    "name": "OpenMageModuleFostering\/BrainActs_RestrictCheckout",
     "type": "magento-module",
     "license": "osm",
     "homepage": "",
     "description": "Hides add to cart and checkout button using simple rules.",
     "authors": [
-    {
-        "name": "Aleksandr Tykhnov",
-        "email": "tihonov.sania@gmail.com"
-    }
-],
+        {
+            "name": "Aleksandr Tykhnov",
+            "email": "tihonov.sania@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
